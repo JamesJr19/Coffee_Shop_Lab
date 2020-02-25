@@ -17,16 +17,16 @@ namespace Coffee_Shop_Lab.Controllers
         
         public IActionResult Summary(RegisterUser user)
         {
-            //if (ModelState.IsValid)
-            //{
-                return View();
-            //}
-            //else
-            //{
-            //    //the model object of type user did not match the requirements we made
-            //    //in our User class
-            //    return View("UserForm", User);
-            //}
+            if (ModelState.IsValid)
+            {
+                return View(user);
+            }
+            else
+            {
+                //the model object of type user did not match the requirements we made
+                //in our User class
+                return View("UserForm", user);
+            }
         }
     }
 }

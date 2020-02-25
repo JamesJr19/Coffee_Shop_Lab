@@ -21,7 +21,7 @@ namespace Coffee_Shop_Lab.Models
         [StringLength(15, MinimumLength = 5, ErrorMessage = "Password must be between 5 and 15 characters")]
         public string Password { get; set; }
 
-        [RegularExpression(@"\d{4}/\d{2}/\d{2}")]
+        //[RegularExpression/*(@"\d{4}/\d{2}/\d{2}")]*/
         public DateTime DOB { get; set; }
 
         public bool Human { get; set; }

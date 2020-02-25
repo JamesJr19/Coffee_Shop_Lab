@@ -4,14 +4,14 @@
 }
 
 <h1>Registration Form</h1>
-
+@Html.ValidationSummary()
 <form action="../User/Summary" method="post">
     <input type="text" name="Name" placeholder="Name" value="@Model.Name" /> <br /><br />
     <input type="text" name="Email" placeholder="Email" /> <br /><br />
     <input type="password" name="Password" placeholder="Password" /> <br /><br />
-    Human: <input type="checkbox" name="Human" required /><br /><br />
+    Human: <input type="checkbox" name="Human" value=True required/><br /><br />
     <input type="date" name="DOB" placeholder="DOB" /> <br /><br />
-    Favorite Color: <input type="color" name="FavColor" required/><br /><br />
+    Favorite Color: <input type="color" name="FavColor" /><br /><br />
     <input required type="radio" name="gender" value="male"> Male
     <input required type="radio" name="gender" value="female"> Female <br /><br />
     <input type="submit" name="Submit" placeholder="Submit" />
